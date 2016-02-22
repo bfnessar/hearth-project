@@ -172,8 +172,7 @@ class HearthLodge:
 		castable_minions = [] # List of minion objects
 		for m in self.cards_dict.values():
 			if (m["type"] == "MINION" and m["cost"] <= m1.cost):
-				m2 = c.Minion()
-				m2.load_from_dict(m)
+				m2 = c.Minion(m)
 				castable_minions.append(m2)
 
 		# Now, we iterate over the list of on-curve minions and see which ones
